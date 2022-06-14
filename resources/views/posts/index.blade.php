@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <form onsubmit="return confirm('Apakah Anda Yakin?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                        <form onsubmit="return confirm('Konfirmasi Untuk Menghapus Post \'{{ $post->title }}\'');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
                             <div class="btn-group text-center" style="width: 100%;">
                                 {{-- BUTTON EDIT --}}
                                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-outline-secondary">
