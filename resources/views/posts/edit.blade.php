@@ -16,6 +16,7 @@
                         <div class="mb-3">
                             <label for="ImageInput" class="form-label">Gambar</label>
                             <input type="file" class="form-control @error('image') is-invalid @enderror" name="image" id="ImageInput" aria-label="Upload">
+                            <div id="imageHelp" class="form-text">Max file size is 2mb. (jpeg, png, jpg, gif, svg)</div>
                             
                             <!-- error message untuk title -->
                             @error('image')
@@ -30,6 +31,7 @@
                 <div class="mb-3">
                     <label for="TitleInput" class="form-label">Judul</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="TitleInput" name="title" value="{{ old('title', $post->title) }}" placeholder="Masukkan judul post">
+                    <div id="titleHelp" class="form-text">Min 5 characters.</div>
                 
                     <!-- error message untuk title -->
                     @error('title')
@@ -42,6 +44,7 @@
                 <div class="mb-3">
                     <label for="TextAreaInput" class="form-label">Konten</label>
                     <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" id="TextAreaInput">{{ old('content', $post->content) }}</textarea>
+                    <div id="contentHelp" class="form-text">Min 10 characters.</div>
                     
                     <!-- error message untuk content -->
                     @error('content')
